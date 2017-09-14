@@ -1,6 +1,7 @@
 language: ruby
+cache: bundler
 rvm:
-  - 1.9.2
-  - 1.9.3
+  - 2.2.7
+  - 2.3
 script:
   - bundle exec rake test
