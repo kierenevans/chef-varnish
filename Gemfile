@@ -1,12 +1,16 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'cucumber',   '~> 1.2.1'
-gem 'httparty',   '~> 0.8.3'
-gem 'minitest',   '~> 3.0.0'
-gem 'nokogiri',   '~> 1.5.0'
-gem 'chef',       '~> 10.12.0'
-gem 'chefspec',   '~> 0.6.1'
-gem 'fauxhai',    '~> 0.0.3'
-gem 'foodcritic', '~>1.6.1'
-gem 'rake'
-gem 'test-kitchen'
+gem 'berkshelf', '~> 4.3'
+gem 'chef', '~> 12.5'
+gem 'rake', '~> 11.1'
+
+group :integration do
+  gem 'kitchen-vagrant', '~> 0.20'
+  gem 'test-kitchen', '~> 1.7'
+end
+
+group :test do
+  gem 'chefspec', '~> 4.6'
+  gem 'foodcritic', '~> 6.2'
+  gem 'rubocop', '~> 0.39'
+end
