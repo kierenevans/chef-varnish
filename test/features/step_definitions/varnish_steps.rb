@@ -1,6 +1,5 @@
 
 Given /^Varnish is installed$/ do
-
 end
 
 When /^I run varnishlog$/ do

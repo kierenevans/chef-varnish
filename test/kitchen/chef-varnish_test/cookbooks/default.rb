@@ -1,1 +1,1 @@
-include_recipe "chef-varnish::default"
+include_recipe 'chef-varnish::default'

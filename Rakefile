@@ -18,7 +18,7 @@ namespace :style do
 end
 
 desc 'Run all style checks'
-task :style => %w[style:chef style:ruby]
+task style: %w(style:chef style:ruby)
 
 # Rspec and ChefSpec
 desc 'Run ChefSpec examples'
@@ -37,6 +37,6 @@ namespace :integration do
   end
 end
 
-task :travis => %w[style spec]
+task travis: %w(style spec)
 
-task :test => %w[style spec integration:vagrant]
+task test: %w(style spec integration:vagrant)
